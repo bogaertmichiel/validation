@@ -130,7 +130,7 @@ class Iban extends AbstractRule implements Rule
     public function passes($attribute, $value)
     {
         // Support IBAN values with dots in it.
-+        $value = str_replace('.', '', $value);
+        $value = str_replace('.', '', $value);
         
         // normalize value
         $value = str_replace(' ', '', strtoupper($value));
